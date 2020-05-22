@@ -1,0 +1,136 @@
+@define-color fg #ebdbb2;
+@define-color bg #1d1d1d;
+@define-color bg-alt #1d2021;
+@define-color bg-logo #458588;
+@define-color bg-focus #689d6a;
+@define-color bg-music #b16286;
+@define-color bg-clock #98971a;
+@define-color bg-charging #b8bb26;
+@define-color bg-warning #d79921;
+@define-color bg-critical #cc241d;
+
+* {
+  border: none;
+  font-family: "Source Code Pro for Powerline";
+  font-size: 13px;
+  min-height: 0;
+  color: @fg;
+}
+window#waybar {
+  border-radius: 25px;
+  border-bottom-style: inset;
+  background: @bg;
+}
+
+#custom-logo {
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  border: none;
+  color: @fg;
+  background: @bg-logo;
+}
+
+#custom-right {
+  padding-right: 10px;
+  color: @bg-logo;
+}
+
+#workspaces,
+#clock,
+#custom-music,
+#window {
+  font-weight: 800;
+}
+
+#window {
+  margin-left: 10px;
+}
+
+/* Workspace Buttons */
+#workspaces button label {
+  color: @fg;
+}
+
+#workspaces button:hover {
+  border: none;
+  border-radius: 20px;
+  background: @bg-alt;
+}
+#workspaces button.focused label {
+  color: @fg;
+}
+#workspaces button.focused {
+  border-radius: 20px;
+  background: @bg-focus;
+}
+
+#mode {
+  background-color: @bg;
+  color: @fg;
+}
+
+#clock,
+#tray,
+#mode,
+#idle_inhibitor {
+  padding: 0 5px;
+  margin: 0 10px;
+}
+
+#battery,
+#pulseaudio,
+#memory,
+#cpu,
+#network {
+  padding: 0;
+  margin: 0;
+}
+
+#battery#icon {
+  padding: 0px;
+  margin: 0px;
+}
+
+#idle_inhibitor {
+  padding: 0 10px;
+}
+
+#idle_inhibitor.activated {
+  background-color: @bg-focus;
+  color: @bg-alt;
+}
+
+#clock {
+  margin: 0;
+  background: @bg-clock;
+  border-radius: 20px;
+}
+#battery.warning {
+  color: @bg-warning;
+}
+
+#battery.critical {
+  color: @bg-warning;
+}
+
+#battery.charging {
+  color: @bg-charging;
+}
+#cpu.warning {
+  color: @bg-warning;
+}
+
+#cpu.critical {
+  color: @bg-warning;
+}
+#network.disconnected {
+  color: @bg-warning;
+}
+
+#custom-spotify {
+  border-radius: 20px;
+  background: @bg-music;
+  color: @fg;
+}
