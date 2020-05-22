@@ -26,9 +26,6 @@
   "custom/logo": {
     "format": "<span font='19'>󰣇</span>"
   },
-  "custom/right": {
-    "format": "<span font='20'></span>"
-  },
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
@@ -53,7 +50,7 @@
       "max-length": 150
   },
   "tray": {
-    "icon-size": 18,
+    "icon-size": 23,
     "spacing": 10
   },
   "clock": {

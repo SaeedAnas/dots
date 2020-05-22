@@ -16,6 +16,7 @@
   min-height: 0;
   color: @fg;
 }
+
 window#waybar {
   border-radius: 25px;
   border-bottom-style: inset;

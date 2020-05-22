@@ -52,3 +52,4 @@ export EDITOR=nvim
 export VISUAL=nvim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files .config .vim .vimbackup .vimswap .vimundo .vimviews code Desktop Documents Downloads IdeaProjects org --hidden"
+export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"

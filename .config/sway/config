@@ -278,25 +278,6 @@ font pango:monospace 10
 #for_window [class="Spotify"] move to workspace $ws5
 
 #####################################################################################################################
-#################                          execute applications at boot time                        #################
-#####################################################################################################################
-
-# TRAY APPLICATIONS
-
-# applications that are not installed will not start
-# you may see a wheel - hashtag out things you do not want
-
-
-# redshift
-exec --no-startup-id redshift-gtk
-
-# blueman tray
-exec blueman-tray
-
-# nm-applet
-exec nm-applet --indicator
-
-#####################################################################################################################
 #################                                 system applications                               #################
 #####################################################################################################################
 
@@ -575,6 +556,25 @@ exec_always ~/.config/sway/scripts/waybar.sh
 
 # use wordwall to change the wallpaper
 # exec ~/.config/sway/scripts/wordwall.sh arch
+
+#####################################################################################################################
+#################                          execute applications at boot time                        #################
+#####################################################################################################################
+
+# TRAY APPLICATIONS
+
+# applications that are not installed will not start
+# you may see a wheel - hashtag out things you do not want
+
+
+# redshift
+exec --no-startup-id redshift-gtk
+
+# blueman tray
+exec blueman-tray
+
+# nm-applet
+exec nm-applet --indicator
 
 
 include /etc/sway/config.d/*

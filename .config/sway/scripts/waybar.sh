@@ -15,7 +15,6 @@ function restart_flashfocus() {
     restart_program flashfocus "flashfocus --config /home/anas/.config/flashfocus/flashfocus.yml"
 
 }
-export GTK_THEME=Materia-Dark
 restart_waybar
 restart_flashfocus
 #sudo caps2esc

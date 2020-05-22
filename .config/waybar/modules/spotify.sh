@@ -7,11 +7,11 @@ end=$(</home/anas/.config/waybar/modules/ending.txt)
 info=$(playerctl metadata --format '{{title}}')
 
  if [[ ${#info} -gt 20 ]]; then
-    info=$(echo $info | cut -c$beginning-$end)"... "
+    info=$(echo $info | cut -c$beginning-$end)"..."
   fi
-
-  text=$info
-if [[ $class == "paused" ]]; then
+if [[ $class == "playing" ]]; then
+  text=$info" "
+elif [[ $class == "paused" ]]; then
   text=$paused$info
 fi
 
