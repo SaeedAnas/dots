@@ -1,5 +1,5 @@
 #! /bin/zsh
-pathlist=( /home/anas/color-scripts/color-scripts/*);
+pathlist=( /home/anas/colorscripts/*);
 rand=$[$RANDOM % ${#pathlist[@]}]
   ${pathlist[$rand]}
   echo "\n"
