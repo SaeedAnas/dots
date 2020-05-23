@@ -1,4 +1,5 @@
 import json
 import sys
-print(sys.argv[1])
-print(sys.argv[1].encode('utf-8'))
+with open('text.json', encoding='SHIFT_JIS') as f:
+    d = json.loads(f.read().encode('SHIFT_JIS').decode())
+print(d)

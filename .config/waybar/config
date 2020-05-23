@@ -29,17 +29,21 @@
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
-    "format": " {name} ",
+    "format": " <span font='13'>{icon}</span> ",
     "format-icons": {
-      "1": "www",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "urgent": "",
-      "focused": "",
-      "default": ""
+    "urgent": "",
+    "focused": "",
+    "default": "",
+    "1": "󰞷",
+    "2": "󰅩",
+    "3": "󰂓",
+    "4": "󰈹",
+    "5": "󰗃",
+    "6": "󰙯",
+    "7": "󰋀",
+    "8": "󰝚",
+    "9": "󰠮",
+    "10": "󰉋"
     }
   },
   "sway/mode": {

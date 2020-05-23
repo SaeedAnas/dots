@@ -17,8 +17,7 @@ fi
 
 
 echo -e "{\"text\":\""$text"\", \"class\":\""$class"\"}"
-# python ~/.config/waybar/modules/encoder.py "{\"text\":\""$text"\", \"class\":\""$class"\"}"
- 
+
 if [[ ${#info} > 20 ]]; then
   if [[ ${#info} < $((end)) ]]; then
     echo "1" > /home/anas/.config/waybar/modules/beginning.txt
