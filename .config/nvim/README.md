@@ -1,6 +1,5 @@
 ## TODO
 
-- People asked about vimwiki I kinda hate it but maybe I'll add it
 - float term lazy git
 - spectre, or async task/run
 - setup custom paths
