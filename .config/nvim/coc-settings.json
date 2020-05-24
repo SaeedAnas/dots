@@ -1,0 +1,65 @@
+{
+  // suggestions
+  // "suggest.echodocSupport": true,
+  // TODO add more labels and give them cool glyphs
+  "suggest.completionItemKindLabels": {
+    "text": "t",
+    "method": "m",
+    "function": "f"
+  },
+  // diagnostics
+  "diagnostic.errorSign": "✗",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+  // "diagnostic.displayByAle": true,
+  // codelens TODO what does this get me?
+  // "codeLens.enable": true,
+  // list "list.indicator": ">", "list.selectedSignText": " ",
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python",
+    "rust"
+  ],
+  "coc.preferences.hoverTarget": "float",
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  // snippets
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+  // explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.icon.enableVimDevicons": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit",
+    "b": "gotoParent"
+  },
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  },
+  "clangd.path": "/home/anas/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
+  // TODO language servers
+  // TODO g:coc_global_extensions
+  // TODO b:coc_suggest_disable=1 GOYO
+  // TODO add to paths.vim g:coc_node_path
+}
