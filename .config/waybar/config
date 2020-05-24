@@ -87,7 +87,7 @@
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%)",
-    "format-disconnected": " Disconnected ⚠ ",
+    "format-disconnected": " Disconnected ⚠",
     "on-click": "nm-connection-editor"
   },
   "network#icon": {

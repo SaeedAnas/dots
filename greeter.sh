@@ -5,4 +5,4 @@ rand=$[$RANDOM % ${#pathlist[@]}]
   echo "\n"
   fortune
   echo "\n"
- 
+
