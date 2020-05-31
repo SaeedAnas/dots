@@ -41,7 +41,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Themes
     Plug 'morhetz/gruvbox'
-    Plug 'ayu-theme/ayu-vim'
+    Plug 'lifepillar/vim-solarized8'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
@@ -78,11 +78,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
-    Plug  'jceb/vim-orgmode'
 
-    Plug 'rust-lang/rust.vim'
+    Plug 'rust-lang/rust.vim', {'on': 'Rust'}
 
-    Plug 'liuchengxu/vista.vim'
+    Plug 'honza/vim-snippets'
+
+    Plug 'artur-shaik/vim-javacomplete2'
+
 call plug#end()
 
 " Automatically install missing plugins on startup

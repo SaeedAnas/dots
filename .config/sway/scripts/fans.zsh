@@ -65,8 +65,8 @@ function min() {
 }
 
 function quiet() {
-    changeRamp min $MIN_SPEED
-    changeRamp max 4300
+    changeRamp min 3800
+    changeRamp max $MAX_SPEED
     submit
 }
 

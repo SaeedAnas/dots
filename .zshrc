@@ -37,7 +37,7 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-# end 
+# end
 
 bindkey -v
 alias clear="clear && /home/anas/greeter.sh"
@@ -50,6 +50,7 @@ SAVEHIST=300
 HISTFILE=~/.zsh_history
 export EDITOR=nvim
 export VISUAL=nvim
+export PAGER=most
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files .config .vim .vimbackup .vimswap .vimundo .vimviews code Desktop Documents Downloads IdeaProjects org --hidden"
 export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"

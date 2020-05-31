@@ -1,7 +1,8 @@
 ############################################################################################################
 #  ______   __       __   ______  __      __         ______    ______   __    __  ________  ______   ______  
 # /      \ |  \  _  |  \ /      \|  \    /  \       /      \  /      \ |  \  |  \|        \|      \ /      \ 
-#|  $$$$$$\| $$ / \ | $$|  $$$$$$\\$$\  /  $$      |  $$$$$$\|  $$$$$$\| $$\ | $$| $$$$$$$$ \$$$$$$|  $$$$$$\ | $$___\$$| $$/  $\| $$| $$__| $$ \$$\/  $$______ | $$   \$$| $$  | $$| $$$\| $$| $$__      | $$  | $$ __\$$
+#|  $$$$$$\| $$ / \ | $$|  $$$$$$\\$$\  /  $$      |  $$$$$$\|  $$$$$$\| $$\ | $$| $$$$$$$$ \$$$$$$|  $$$$$$\ 
+#| $$___\$$| $$/  $\| $$| $$__| $$ \$$\/  $$______ | $$   \$$| $$  | $$| $$$\| $$| $$__      | $$  | $$ __\$$
 # \$$    \ | $$  $$$\ $$| $$    $$  \$$  $$|      \| $$      | $$  | $$| $$$$\ $$| $$  \     | $$  | $$|    \
 # _\$$$$$$\| $$ $$\$$\$$| $$$$$$$$   \$$$$  \$$$$$$| $$   __ | $$  | $$| $$\$$ $$| $$$$$     | $$  | $$ \$$$$
 #|  \__| $$| $$$$  \$$$$| $$  | $$   | $$          | $$__/  \| $$__/ $$| $$ \$$$$| $$       _| $$_ | $$__| $$
@@ -40,6 +41,7 @@
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $mod2 Mod1
 
 # Home row direction keys, like vim
 set $left h
@@ -207,7 +209,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -231,6 +233,12 @@ mode "resize" {
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
 
+    bindsym Shift+$left resize shrink width 60px
+    bindsym Shift+$down resize grow height 60px
+    bindsym Shift+$up resize shrink height 60px
+    bindsym Shift+$right resize grow width 60px
+
+
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
@@ -242,6 +250,12 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# bindsym $mod2+$left resize shrink width 50px
+# bindsym $mod2+$down resize grow height 50px
+# bindsym $mod2+$up resize shrink height 50px
+# bindsym $mod2+$right resize grow width 50px
+
 
 #####################################################################################################################
 #################                          choose the font                                          #################
@@ -310,6 +324,11 @@ bindsym $mod+Shift+Return exec firefox
 
 # Xephyr 
 bindsym $mod+x exec ~/code/scripts/bspwm.sh
+
+# Emacs 
+bindsym $mod+i exec emacs
+
+bindsym $mod+o exec alacritty -e nvim
 
 #####################################################################################################################
 #################                          screenshots                                              #################
@@ -426,12 +445,12 @@ set $fan_script "/home/anas/.config/sway/scripts/fans.zsh"
 bindsym $mod+Shift+f mode $fan
 
 mode $fan {
-	bindsym Escape 		mode "default"
-	bindsym Return		exec $fan_script submit; mode "default"
+	bindsym Escape 	mode "default"
+	bindsym Return	exec $fan_script submit; mode "default"
 	bindsym equal	exec $fan_script max; mode "default"
 	bindsym minus	exec $fan_script min; mode "default"
-    bindsym q exec $fan_script quiet; mode "default"
-    bindsym Shift+q exec $fan_script silent; mode "default"
+        bindsym q       exec $fan_script quiet; mode "default"
+        bindsym Shift+q exec $fan_script silent; mode "default"
 }
 
 #####################################################################################################################
@@ -590,6 +609,9 @@ exec blueman-tray
 # nm-applet
 exec nm-applet --indicator
 
+# emacs daemon for faster boot times
+exec emacs --daemon
+
 
 include /etc/sway/config.d/*
 
@@ -603,4 +625,4 @@ include /etc/sway/config.d/*
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
-#####################################################################################################################t
+#####################################################################################################################

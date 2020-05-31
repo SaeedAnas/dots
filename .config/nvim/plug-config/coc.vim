@@ -155,3 +155,6 @@ let g:coc_explorer_global_presets = {
 " nmap <space>f :CocCommand explorer --preset floatingRightside<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
+let g:coc_snippet_next = '<tab>'
+
+let g:coc_snippet_prev = '<S-Tab>'

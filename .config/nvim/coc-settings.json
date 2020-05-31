@@ -14,7 +14,7 @@
   "diagnostic.hintSign": " ",
   // "diagnostic.displayByAle": true,
   // codelens TODO what does this get me?
-  // "codeLens.enable": true,
+  //"codeLens.enable": true,
   // list "list.indicator": ">", "list.selectedSignText": " ",
   // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
@@ -26,7 +26,8 @@
     "yaml",
     "json",
     "python",
-    "rust"
+    "rust",
+    "java"
   ],
   "coc.preferences.hoverTarget": "float",
   // python config
@@ -57,9 +58,8 @@
       "rootPatterns": ["Cargo.toml"]
     }
   },
+  // Rust
+  "rust-analyzer.updates.channel": "nightly",
+
   "clangd.path": "/home/anas/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
-  // TODO language servers
-  // TODO g:coc_global_extensions
-  // TODO b:coc_suggest_disable=1 GOYO
-  // TODO add to paths.vim g:coc_node_path
 }
