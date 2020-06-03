@@ -63,8 +63,8 @@ set $menu alacritty --class 'launcher' -e sway-launcher-desktop
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-#output * bg ~/walls/mountains.jpg stretch
-set $style catalina
+# output * bg ~/walls/mountains.jpg stretch
+set $style mojaveHD 
 exec_always dwall -o $style
 exec dwall -s $style
 # Run monitor script nor dual monitor support
@@ -104,7 +104,7 @@ exec_always ~/.config/sway/scripts/monitor.zsh
     bindsym $mod+4 workspace $ws4
     bindsym $mod+5 workspace $ws5
     bindsym $mod+6 workspace $ws6
-    bindsym $mod+7 workspace $ws7
+    bindsym $mod+7 workspace $ws7 
     bindsym $mod+8 workspace $ws8
     bindsym $mod+9 workspace $ws9
     bindsym $mod+0 workspace $ws10
@@ -209,7 +209,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent

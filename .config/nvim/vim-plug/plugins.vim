@@ -40,7 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Closetags
     Plug 'alvan/vim-closetag'
     " Themes
-    Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
     Plug 'lifepillar/vim-solarized8'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -84,6 +84,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
 
     Plug 'artur-shaik/vim-javacomplete2'
+
+    Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 
 call plug#end()
 

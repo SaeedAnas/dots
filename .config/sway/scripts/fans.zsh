@@ -10,7 +10,7 @@ SUFFIX=\_fan1_speed=
 
 function find() {
 	local var=$1$SUFFIX 
-	echo "${$(cat /etc/mbpfan.conf | grep "$var")//"$var"/}"
+	echo "${$(cat /etc/mbpfan.conf | rg "$var")//"$var"/}"
 }
 
 function inc() {

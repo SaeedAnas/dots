@@ -27,7 +27,8 @@
     "json",
     "python",
     "rust",
-    "java"
+    "java",
+    "typescript"
   ],
   "coc.preferences.hoverTarget": "float",
   // python config

@@ -44,13 +44,24 @@ alias clear="clear && /home/anas/greeter.sh"
 alias n="nvim"
 alias ls="exa"
 alias spt="/home/anas/code/scripts/spt.sh"
+alias cat="bat"
+alias grep="rg"
+alias ps="procs"
+alias du="dust"
+alias find="fd"
+alias awk="rargs"
+# alias cd="z"
+SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
+
+# init zoxide
+eval "$(zoxide init --cmd c zsh)"
 
 autoload zed
 SAVEHIST=300
 HISTFILE=~/.zsh_history
 export EDITOR=nvim
 export VISUAL=nvim
-export PAGER=most
+export PAGER=less
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files .config .vim .vimbackup .vimswap .vimundo .vimviews code Desktop Documents Downloads IdeaProjects org --hidden"
 export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"
