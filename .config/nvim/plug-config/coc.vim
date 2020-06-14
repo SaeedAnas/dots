@@ -1,3 +1,4 @@
+"let g:coc_node_path = '/usr/bin/node --native'
   " let g:coc_global_extensions = [
   "   \ 'coc-snippets',
   "   \ 'coc-actions',

@@ -325,10 +325,20 @@ bindsym $mod+Shift+Return exec firefox
 # Xephyr 
 bindsym $mod+x exec ~/code/scripts/bspwm.sh
 
-# Emacs 
-bindsym $mod+i exec emacs
+# Intellij Idea
+bindsym $mod+i exec idea
 
-bindsym $mod+o exec alacritty -e nvim
+# Zathura
+bindsym $mod+z exec zathura
+
+# Discord
+bindsym $mod+o exec discord
+
+# Caprine
+bindsym $mod+p exec caprine
+
+# Emacs
+bindsym $mod+u exec emacs
 
 #####################################################################################################################
 #################                          screenshots                                              #################
@@ -374,22 +384,23 @@ for_window [app_id="^launcher$"] floating enable, border none
 #####################################################################################################################
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +8%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -8%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym $mod+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym $mod+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 #####################################################################################################################
 #################                          backlight                                               #################
 #####################################################################################################################
-set $brightness brightness f1 f2
-mode "$brightness" {
-     bindsym XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 10
-     bindsym XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 10
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
+# Screen Brightness
 bindsym XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 100
 bindsym XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 100
-bindsym $mod+Shift+b mode "$brightness"
+bindsym $mod+XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 10
+bindsym $mod+XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 10
 
+bindsym XF86KbdBrightnessUp exec kbdlight up 10
+bindsym XF86KbdBrightnessDown exec kbdlight down 10
+bindsym $mod+XF86KbdBrightnessUp exec kbdlight up 1
+bindsym $mod+XF86KbdBrightnessDown exec kbdlight down 1
 #####################################################################################################################
 #################                          playerctl                                                #################
 #####################################################################################################################
@@ -440,7 +451,6 @@ gaps outer 4
 #   + : fans at full speed
 
 set $fan "Min Fan | Q q - +"
-set $max_fan "Set Max Fan Speed = -"
 set $fan_script "/home/anas/.config/sway/scripts/fans.zsh"
 bindsym $mod+Shift+f mode $fan
 
@@ -448,7 +458,7 @@ mode $fan {
 	bindsym Escape 	mode "default"
 	bindsym Return	exec $fan_script submit; mode "default"
 	bindsym equal	exec $fan_script max; mode "default"
-	bindsym minus	exec $fan_script min; mode "default"
+        bindsym minus	exec $fan_script min; mode "default"
         bindsym q       exec $fan_script quiet; mode "default"
         bindsym Shift+q exec $fan_script silent; mode "default"
 }

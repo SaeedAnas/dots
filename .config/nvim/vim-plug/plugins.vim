@@ -10,9 +10,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Change dates fast  Plug 'tpope/vim-speeddating'
   " Convert binary, hex, etc..
-  Plug 'glts/vim-radical'
+  " Plug 'glts/vim-radical'
   " Files
-  Plug 'tpope/vim-eunuch'
+  " Plug 'tpope/vim-eunuch'
   " Repeat stuff
   Plug 'tpope/vim-repeat'
   " Surround
@@ -54,6 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    " Plug 'liuchengxu/vim-clap'
     " Git
     " Plug 'mhinz/vim-signify'
     Plug 'airblade/vim-gitgutter'
@@ -64,6 +65,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Start Screen
     Plug 'mhinz/vim-startify'
+    " Plug 'hardcoreplayers/dashboard-nvim'
     " Vista
     Plug 'liuchengxu/vista.vim'
     " See what keys do like in emacs
@@ -72,12 +74,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     " Making stuff
     Plug 'neomake/neomake'
-    " Snippets TODO fix TAB hijack
-    " Plug 'SirVer/ultisnips'
-    " Better Comments
-    " Plug 'jbgutierrez/vim-better-comments'
-    " Echo doc
-    " Plug 'Shougo/echodoc.vim'
 
     Plug 'rust-lang/rust.vim', {'on': 'Rust'}
 
@@ -85,7 +81,26 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'artur-shaik/vim-javacomplete2'
 
-    Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+    Plug 'udalov/kotlin-vim'
+
+    Plug 'jceb/vim-orgmode'
+
+    Plug 'ChristianChiarulli/codi.vim'
+
+    " Markdown in Rust
+    function! BuildComposer(info)
+      if a:info.status != 'unchanged' || a:info.force
+        if has('nvim')
+          !cargo build --release --locked
+        else
+          !cargo build --release --locked --no-default-features --features json-rpc
+        endif
+      endif
+    endfunction
+
+    Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
+
 
 call plug#end()
 

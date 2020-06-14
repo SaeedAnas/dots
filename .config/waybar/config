@@ -51,7 +51,7 @@
   },
   "sway/window": {
       "format": "anas@archbook ➜ {}",
-      "max-length": 150
+      "max-length": 125
   },
   "tray": {
     "icon-size": 23,
@@ -132,9 +132,8 @@
   },
   "custom/spotify": {
     "format": "  <span font=\"FontAwesome 12\"></span> {} ",
-    "interval": 1,
     "return-type": "json",
-    "exec": "~/.config/waybar/modules/spotify.sh",
-    "escape": true
+    "restart-interval": 1,
+    "exec": "cargo run --manifest-path ~/.config/waybar/modules/spotify/Cargo.toml"
   }
 }

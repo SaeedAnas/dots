@@ -131,6 +131,7 @@ window#waybar {
 }
 
 #custom-spotify {
+  /* padding: 0 15px; */
   border-radius: 20px;
   background: @bg-music;
   color: @fg;

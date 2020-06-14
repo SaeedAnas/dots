@@ -26,6 +26,7 @@ function inc() {
 		changeRamp $1 $sum
 
 	fi
+	submit
 }
 function dec() {
 	local orig=$(find $1)
@@ -39,6 +40,7 @@ function dec() {
 		changeRamp $1 $diff
 
 	fi
+	submit
 }
 
 function max() {
