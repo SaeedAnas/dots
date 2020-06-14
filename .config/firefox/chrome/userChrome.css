@@ -1,2 +1,9 @@
-@import url(userChrome-MAIN.css) (max-width: 1500px);
-@import url(userChrome-ONE-LINER.css) (min-width: 1501px);
+@import "global/variables.css";
+@import "global/global.css";
+@import "icons/icons.css";
+@import "tabbar/tabbar.css";
+@import "navbar/navbar.css";
+@import "personalbar/personalbar.css";
+@import "popup/popup.css";
+@import "urlbar/urlbar.css";
+@import "findbar/findbar.css";
