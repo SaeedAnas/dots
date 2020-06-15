@@ -1,5 +1,5 @@
-
-let g:startify_custom_header = [
+let g:dashboard_default_executive = 'fzf'
+let g:dashboard_custom_header = [
             \ " ",
             \ " ",
             \ " ",
@@ -24,41 +24,26 @@ let g:startify_custom_header = [
         \    "    `''                                                                      ``'",
         \]
 
-let g:startify_custom_footer= [
+let g:dashboard_custom_footer = [
       \ '      Have fun with neovim ^_^       ',
       \ '',
       \ ]
 
 
-let g:startify_session_dir = '~/.config/nvim/session'
+let g:mapleader="\<Space>"
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
+nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>tc :Colors<CR>
+nnoremap <silent> <Leader>fa :Rg<CR>
+nnoremap <silent> <Leader>fb :Marks<CR>
 
-
-let g:startify_lists = [
-          \ { 'type': 'files',     'header': ['   Files']                        },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-          \ { 'type': 'sessions',  'header': ['   Sessions']                     },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
-          \ ]
-
-
-let g:startify_session_autoload = 1
-let g:startify_session_delete_buffers = 1
-let g:startify_change_to_vcs_root = 1
-let g:startify_fortune_use_unicode = 1
-let g:startify_session_persistence = 1
-
-let g:webdevicons_enable_startify = 1
-
-function! StartifyEntryFormat()
-        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-    endfunction
-
-let g:startify_bookmarks = [
-            \ { 'c': '~/.config/sway/config' },
-            \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
-            \ ]
-
-let g:startify_enable_special = 0
-
-
+let g:dashboard_custom_shortcut={
+  \ 'last_session'       : 'SPC s l',
+  \ 'find_history'       : 'SPC f h',
+  \ 'find_file'          : 'SPC f f',
+  \ 'change_colorscheme' : 'SPC t c',
+  \ 'find_word'          : 'SPC f a',
+  \ 'book_marks'         : 'SPC f b',
+  \ }

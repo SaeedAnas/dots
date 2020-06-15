@@ -53,7 +53,7 @@ alias du="dust"
 alias find="fd"
 alias awk="rargs"
 # alias cd="z"
-SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
+# SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 alias ytop="ytop -a -b -p -s"
 
 # init zoxide
@@ -67,6 +67,7 @@ export VISUAL=nvim
 export PAGER=less
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="rg --files ~/.config ~/.vim ~/.vimbackup ~/.vimswap ~/.vimundo ~/.vimviews ~/code ~/Desktop ~/Documents ~/Downloads ~/IdeaProjects ~/org --hidden"
-export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"
+# export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"
 export GRAAL_PATH=/home/anas/graalvm/graalvm-ce-java11-20.1.0/bin:$PATH
 # export LLVM_TOOLCHAIN=$(lli --print-toolchain-path)
+
