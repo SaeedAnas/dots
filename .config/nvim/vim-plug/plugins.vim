@@ -78,6 +78,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'ChristianChiarulli/codi.vim'
 
+  Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+
   " Markdown in Rust
   function! BuildComposer(info)
     if a:info.status != 'unchanged' || a:info.force

@@ -15,6 +15,6 @@ function restart_flashfocus() {
     restart_program flashfocus "flashfocus --config /home/anas/.config/flashfocus/flashfocus.yml"
 
 }
-restart_waybar
+restart_waybar &
 restart_flashfocus
 #sudo caps2esc

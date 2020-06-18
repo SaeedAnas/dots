@@ -44,6 +44,8 @@ alias clear="clear && /home/anas/greeter.sh"
 alias n="nvim"
 alias ni='nvim $(fzf)'
 alias ra="ranger"
+alias ri='ranger $(fd --type d --exclude "{.cache/*,anaconda3/*,.wine/*,.emacs.d*/*}" --color never --hidden | fzf)'
+alias gl="glances"
 alias ls="exa"
 alias spt="/home/anas/code/scripts/spt.sh"
 alias cat="bat"
@@ -66,8 +68,11 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND="rg --files ~/.config ~/.vim ~/.vimbackup ~/.vimswap ~/.vimundo ~/.vimviews ~/code ~/Desktop ~/Documents ~/Downloads ~/IdeaProjects ~/org --hidden"
+export FZF_DEFAULT_COMMAND="rg --files ~/.config ~/.vim ~/code ~/Desktop ~/Documents ~/Downloads ~/IdeaProjects ~/org --hidden"
 # export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor palette"
 export GRAAL_PATH=/home/anas/graalvm/graalvm-ce-java11-20.1.0/bin:$PATH
 # export LLVM_TOOLCHAIN=$(lli --print-toolchain-path)
+
+# Starship Prompt
+# eval "$(starship init zsh)"
 

@@ -56,11 +56,11 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     },
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    },
+    //    "rust": {
+    //      "command": "rust-analyzer",
+    //      "filetypes": ["rust"],
+    //      "rootPatterns": ["Cargo.toml"]
+    //    },
     "kotlin": {
       "command": "/home/anas/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]

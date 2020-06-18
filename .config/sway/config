@@ -50,7 +50,8 @@ set $up k
 set $right l 
 
 # Your preferred terminal emulator
-set $term alacritty
+# set $term alacritty
+set $term kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -110,16 +111,16 @@ exec_always ~/.config/sway/scripts/monitor.zsh
     bindsym $mod+0 workspace $ws10
 
     # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
-    bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
-    bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
-    bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-    bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
-    bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-    bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
-    bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-    bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
-    bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $ws10
 
 #####################################################################################################################
 #################                          2 menu's in ArchMerge                                    #################
@@ -267,42 +268,6 @@ bindsym $mod+r mode "resize"
 font pango:monospace 10 
 
 #####################################################################################################################
-#################                          assign applications to workspaces                       #################
-#####################################################################################################################
-
-# Assign application to start on a specific workspace
-# you can find the class with the program xprop
-
-## "1: Code"
-#assign [class="jetbrains-phpstorm|jetbrains-idea|Xed|Brackets|Atom|code-oss"]       → $ws1
-## "2: Terminal"
-#assign [class="Terminator|Alacritty"]                                               → $ws2
-## "3: Browser"
-#assign [class="firefoxdeveloperedition|Firefox|Vivaldi-stable|Opera"]               → $ws3
-#assign [class="google-chrome|Google-chrome"]                                        → $ws3
-## "4: File Manager"
-#assign [class="Nemo|Thunar|Caja|nautilus|Nautilus|Pamac-manager"]                   → $ws4
-## "5: Multimedia"
-#assign [class="Vlc|vlc|Spotify"]                                                    → $ws5
-## "6: Graphism"
-#assign [class="Ristretto|Shotwell|Xviewer|Inkscape|Gimp"]                           → $ws6
-#assign [class="feh|Gthumb|Eog|Pinta|Pixeluvo"]                                      → $ws6
-## "7: Java"
-#assign [class="sun-awt-X11-XFramePeer|jetbrains-studio"]                            → $ws7
-## "8: Cours"
-#assign [class="GeoGebra"]                                                           → $ws8
-## "9: Versionning"
-#assign [class="Meld|GitKraken"]                                                     → $ws9
-## "10: Communication"
-#assign [class="Slack|discord|rocket.chat|Rocket.chat"]                              → $ws10
-## "10: Virtualisation"
-#assign [class="Vmplayer|VirtualBox"]                                                → $ws5
-## "12: Mailing"
-#assign [class="Geary|Evolution"]                                                    → $ws12
-##fix for spotify not moving to workspace $ws5
-#for_window [class="Spotify"] move to workspace $ws5
-
-#####################################################################################################################
 #################                                 system applications                               #################
 #####################################################################################################################
 
@@ -394,8 +359,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # Screen Brightness
 bindsym XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 100
 bindsym XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 100
-bindsym $mod+XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 10
-bindsym $mod+XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 10
+bindsym $mod+XF86MonBrightnessUp exec sudo macbook-lighter-screen --inc 5
+bindsym $mod+XF86MonBrightnessDown exec sudo macbook-lighter-screen --dec 5
 
 bindsym XF86KbdBrightnessUp exec kbdlight up 10
 bindsym XF86KbdBrightnessDown exec kbdlight down 10
