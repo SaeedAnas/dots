@@ -37,6 +37,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Themes
   Plug 'gruvbox-community/gruvbox'
   Plug 'lifepillar/vim-solarized8'
+  Plug 'tomasiser/vim-code-dark'
+  Plug 'rakr/vim-one'
+  Plug 'dracula/vim'
+  " Plug 'flazz/vim-colorschemes'
+  Plug 'joshdick/onedark.vim'
   " Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Status Line
@@ -92,6 +97,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   endfunction
 
   Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
+  Plug 'turbio/bracey.vim'
+
+  Plug 'mattn/emmet-vim'
+
+  Plug 'OmniSharp/omnisharp-vim'
+
+  Plug 'fatih/vim-go'
+
+  Plug 'puremourning/vimspector'
 
 
 

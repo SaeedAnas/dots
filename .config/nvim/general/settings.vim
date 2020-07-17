@@ -48,4 +48,4 @@ set termguicolors
 " You can't stop me
 cmap w!! w !sudo tee %
 
-
+" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')

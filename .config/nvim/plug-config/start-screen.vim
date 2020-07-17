@@ -56,6 +56,7 @@ function! StartifyEntryFormat()
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/sway/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'p': '~/.local/bin/scripts/projectCreate' },
             \ { 'z': '~/.zshrc' },
             \ ]
 

@@ -30,7 +30,6 @@ let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
 let g:which_key_map['c'] = [ 'Codi'                       , 'codi' ]
-let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
@@ -40,6 +39,7 @@ let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
 let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['w'] = [ 'w'                          , 'write' ]
+let g:which_key_map['W'] = [ '<Plug>(coc-metals-expand-decoration)', 'scala' ]
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 
 " Group mappings
@@ -163,6 +163,25 @@ let g:which_key_map.t = {
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'v' : [':Vista ctags'                , 'tag viewer'],
+      \ }
+
+" d is for debugger
+let g:which_key_map.d = {
+      \ 'name' : '+debug',
+      \ 'd' : [':call vimspector#Launch()<CR>', 'launch'],
+      \ 'x' : [':VimspectorReset<CR>', 'reset'],
+      \ 'e' : [':VimspectorEval', 'eval'],
+      \ 'w' : [':VimspectorWatch', 'watch'],
+      \ 'o' : [':VimspectorShowOutput', 'show output'],
+      \ 'c' : ['<Plug>VimspectorContinue', 'continue'],
+      \ 's' : ['<Plug>VimspectorStop', 'stop'],
+      \ 'r' : ['<Plug>VimspectorRestart', 'restart'],
+      \ 'b' : ['<Plug>VimspectorToggleBreakPoint', 'bp'],
+      \ 'B' : ['<Plug>VimspectorToggleConditionalBreakpoint', 'conditional bp'],
+      \ 'f' : ['<Plug>VimspectorAddFunctionBreakPoint', 'function bp'],
+      \ 'l' : ['<Plug>VimspectorStepOver', 'step over'],
+      \ 'j' : ['<Plug>VimspectorStepInto', 'step into'],
+      \ 'J' : ['<Plug>VimspectorStepOut', 'step out'],
       \ }
 
 " Register which key map
