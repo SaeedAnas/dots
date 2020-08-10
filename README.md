@@ -12,7 +12,7 @@ _nvim, ranger, gotop, pfetch, tty-clock_
 - **DM:** ly
 - **WM:** Sway + Waybar
 - **Editor:** Neovim
-- **Terminal:** Alacritty
+- **Terminal:** Kitty
 - **Browser:** Firefox
 - **Wallpapers:** [dwall](https://github.com/adi1090x/dynamic-wallpaper)
 
